@@ -14,7 +14,7 @@
 // 屏幕尺寸
 #define SCREEN_SIZE [UIScreen mainScreen].bounds.size
 // 颜色
-#define LCColor(r, g, b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1.0f]
+#define JFCovertColor(r, g, b) [UIColor colorWithRed:(r)/255.0f green:(g)/255.0f blue:(b)/255.0f alpha:1.0f]
 
 @interface PopActionSheet () {
     
@@ -74,7 +74,7 @@
         [windowView setAlpha:0];
         [windowView setUserInteractionEnabled:NO];
         [windowView setFrame:(CGRect){0, 0, SCREEN_SIZE}];
-        [windowView setBackgroundColor:LCColor(46, 49, 50)];
+        [windowView setBackgroundColor:JFCovertColor(46, 49, 50)];
         [self addSubview:windowView];
         _darkView = windowView;
         
@@ -83,7 +83,7 @@
         
         // 所有按钮的底部view
         UIView *bottomView = [[UIView alloc] init];
-        [bottomView setBackgroundColor:LCColor(214, 214, 222)];
+        [bottomView setBackgroundColor:JFCovertColor(214, 214, 222)];
         [self addSubview:bottomView];
         _bottomView = bottomView;
         
@@ -92,7 +92,7 @@
             // 标题
             UILabel *label = [[UILabel alloc] init];
             [label setText:title];
-            [label setTextColor:LCColor(111, 111, 111)];
+            [label setTextColor:JFCovertColor(111, 111, 111)];
             [label setTextAlignment:NSTextAlignmentCenter];
             [label setFont:[UIFont systemFontOfSize:13.0f]];
             [label setBackgroundColor:[UIColor whiteColor]];
@@ -116,7 +116,7 @@
                 UIColor *titleColor = nil;
                 if (i == buttonIndex) {
                     
-                    titleColor = LCColor(255, 10, 10);
+                    titleColor = JFCovertColor(255, 10, 10);
                     
                 } else {
                     
@@ -188,7 +188,7 @@
         [windowView setAlpha:0];
         [windowView setUserInteractionEnabled:NO];
         [windowView setFrame:(CGRect){0, 0, bounds}];
-        [windowView setBackgroundColor:LCColor(46, 49, 50)];
+        [windowView setBackgroundColor:JFCovertColor(46, 49, 50)];
         [self addSubview:windowView];
         _darkView = windowView;
         
@@ -230,7 +230,7 @@
                 UIColor *titleColor = nil;
                 if (i == buttonIndex) {
                     
-                    titleColor = LCColor(255, 10, 10);
+                    titleColor = JFCovertColor(255, 10, 10);
                     
                 } else {
                     
