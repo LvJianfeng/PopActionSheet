@@ -30,7 +30,14 @@
 
 
 
-    PopActionSheet *sheet = [PopActionSheet popSheetWithTitle:@"我是要测试的" buttonTitles:@[@"确定",@"不确定",@"可能确定的吧"] redButtonIndex:-1 bounds:screen.bounds.size buttonHeight:49.0f actionSheetColor:[UIColor lightGrayColor] titleColor:[UIColor blueColor] cancelColor:[UIColor orangeColor] cancelBackgoundColor:[UIColor lightGrayColor] delegate:self];
+    PopActionSheet *sheet = [PopActionSheet popSheetWithTitle:@"我是要测试的"
+                                                 buttonTitles:@[@"确定",@"不确定",@"可能确定的吧"]
+                                               redButtonIndex:-1
+                                                       bounds:screen.bounds.size
+                                                 buttonHeight:49.0f
+                                             actionSheetColor:[UIColor lightGrayColor]
+                                                   titleColor:[UIColor blueColor]
+                                                  cancelColor:[UIColor orangeColor] cancelBackgoundColor:[UIColor       lightGrayColor] delegate:self];
     
     [sheet show:0.3f];
 
