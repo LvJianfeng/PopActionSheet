@@ -14,7 +14,7 @@
 
 # 代码使用
 
-PopActionSheet *sheet = [PopActionSheet popSheetWithTitle:nil
+    PopActionSheet *sheet = [PopActionSheet popSheetWithTitle:nil
                                             buttonTitles:@[@"拍照", @"从相册选择"]
                                           redButtonIndex:-1
                                                 delegate:self];
@@ -22,7 +22,7 @@ PopActionSheet *sheet = [PopActionSheet popSheetWithTitle:nil
     [sheet show];
 
 
-PopActionSheet *sheet = [[PopActionSheet alloc] initWithTitle:@"你确定要注销吗？"
+    PopActionSheet *sheet = [[PopActionSheet alloc] initWithTitle:@"你确定要注销吗？"
                                                    buttonTitles:@[@"确定"]
                                                  redButtonIndex:0
                                                        delegate:self];
@@ -30,7 +30,7 @@ PopActionSheet *sheet = [[PopActionSheet alloc] initWithTitle:@"你确定要注�
 
 
 
-PopActionSheet *sheet = [PopActionSheet popSheetWithTitle:@"我是要测试的" buttonTitles:@[@"确定",@"不确定",@"可能确定的吧"] redButtonIndex:-1 bounds:screen.bounds.size buttonHeight:49.0f actionSheetColor:[UIColor lightGrayColor] titleColor:[UIColor blueColor] cancelColor:[UIColor orangeColor] cancelBackgoundColor:[UIColor lightGrayColor] delegate:self];
+    PopActionSheet *sheet = [PopActionSheet popSheetWithTitle:@"我是要测试的" buttonTitles:@[@"确定",@"不确定",@"可能确定的吧"] redButtonIndex:-1 bounds:screen.bounds.size buttonHeight:49.0f actionSheetColor:[UIColor lightGrayColor] titleColor:[UIColor blueColor] cancelColor:[UIColor orangeColor] cancelBackgoundColor:[UIColor lightGrayColor] delegate:self];
     
     [sheet show:0.3f];
 
@@ -53,4 +53,5 @@ PopActionSheet *sheet = [PopActionSheet popSheetWithTitle:@"我是要测试的" 
                   cancelColor:(UIColor *)cancelTextColor
          cancelBackgoundColor:(UIColor *)cancelBackgoundColor
                      delegate:(id<PopActionSheetDelegate>)delegate;
+
 
