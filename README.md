@@ -45,12 +45,12 @@
 
 
 # 类方法
-+ (instancetype)popSheetWithTitle:(NSString *)title
+    + (instancetype)popSheetWithTitle:(NSString *)title
                   buttonTitles:(NSArray *)titles
                 redButtonIndex:(NSInteger)buttonIndex
                       delegate:(id<PopActionSheetDelegate>)delegate;
 
-+ (instancetype)popSheetWithTitle:(NSString *)title
+    + (instancetype)popSheetWithTitle:(NSString *)title
                  buttonTitles:(NSArray *)titles
                redButtonIndex:(NSInteger)buttonIndex
                        bounds:(CGSize)bounds
