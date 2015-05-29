@@ -62,3 +62,58 @@
                      delegate:(id<PopActionSheetDelegate>)delegate;
 
 
+# Reachability
+
+ios 网络状态监测
+
+# 使用方法
+
+只需要将Reachability.h 和 Reachability.m 添加到你的工程文件。
+
+# 代码使用
+
+#pragma mark Reachability
+- (void)reachabilityStatus
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
+    
+    self.internetReachability = [Reachability reachabilityForInternetConnection];
+    [self.internetReachability startNotifier];
+    [self updateInterfaceWithReachability:self.internetReachability];
+}
+
+- (void)reachabilityChanged:(NSNotification *)note
+{
+    Reachability *curReach = [note object];
+    NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
+    [self updateInterfaceWithReachability:curReach];
+}
+
+- (void)updateInterfaceWithReachability:(Reachability *)reachability
+{
+    NetworkStatus status = [reachability currentReachabilityStatus];
+    
+    switch (status)
+    {
+        case NotReachable:
+            DDLogWarn(@"没有网络连接");
+            break;
+            
+        case ReachableViaWiFi:
+        case ReachableViaWWAN:
+            DDLogWarn(@"无线网");
+            break;
+            
+        case kReachableVia2G:
+            DDLogWarn(@"2G");
+            break;
+            
+        case kReachableVia3G:
+            DDLogWarn(@"3G");
+            break;
+            
+        case kReachableVia4G:
+            DDLogWarn(@"4G");
+            break;
+    }
+}
