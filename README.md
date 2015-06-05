@@ -117,3 +117,44 @@ ios 网络状态监测
                 break;
         }
     }
+
+# JFGlobalInstance 单例
+
+设置全局字体；获取本地plist文件（自己修改添加需要的）
+
+    - (NSString *)loadPlistFile:(NSString *)fileNameWithoutExtension //获取本地plist文件
+    
+# UIColor 的类目文件
+
+    /*
+     * Put the string color into UIColor, #5F9C74, for example
+     * Param stringToConvert #5F9C74
+     */
+    + (UIColor *) colorWithHexString: (NSString *) stringToConvert;
+    
+    /*
+     * Simplify the original method
+     */
+    + (UIColor *)colorWithRed:(NSUInteger)red
+                        green:(NSUInteger)green
+                         blue:(NSUInteger)blue;
+    
+    
+    /*
+     * Custom Color
+     */
+    + (UIColor *)customGrayColor;
+    + (UIColor *)customRedColor;
+    + (UIColor *)customYellowColor;
+    + (UIColor *)customGreenColor;
+    + (UIColor *)customBlueColor;
+
+# UINavigationBar 的类目文件
+    //设置UINavgationBar的背景颜色
+    - (void)setCustomBackgroundColor:(UIColor *)backgroundColor;
+    //设置内容的透明度
+    - (void)setCustomContentAlpha:(CGFloat)alpha;
+    //滚动的时候设置y轴
+    - (void)setCustomTranslationY:(CGFloat)translationY;
+    //重置
+    - (void)reset;
